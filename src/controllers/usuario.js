@@ -17,7 +17,7 @@ const usuarioPost = async(req, res) => {
         apellido: body.apellido,
         cita: body.cita,
         year: body.year,
-        vacunacion_completa: body.vacunacion_comple
+        vacunacion_completa: body.vacunacion_completa
     });
 
     usuario.save((err, usuarioDB) => {
@@ -27,6 +27,7 @@ const usuarioPost = async(req, res) => {
                 err
             })
         }
+
 
         res.json({
             ok: true,
