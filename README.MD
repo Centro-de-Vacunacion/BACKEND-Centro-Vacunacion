@@ -1,5 +1,9 @@
 ### BACKEND Centro de Vacunacion
-## dependencies
+## Dependencies
 ~~~
 $ npm i empress cors dotenv express-validator mongoose bcryptjs
+~~~
+## devDependencies
+~~~
+$  npm i nodemon -D
 ~~~
