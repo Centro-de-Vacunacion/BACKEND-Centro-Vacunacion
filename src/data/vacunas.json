@@ -1,0 +1,39 @@
+[
+    { 
+        "nombre" : "Sinovac", 
+        "dosis" : 1.0, 
+        "cantidad" : 20.0, 
+        "existencia" : true
+    },
+    { 
+        "nombre" : "Sinovac", 
+        "dosis" : 2.0, 
+        "cantidad" : 30.0, 
+        "existencia" : true
+    },
+    { 
+        "nombre" : "Pfizer", 
+        "dosis" : 1.0, 
+        "cantidad" : 30.0, 
+        "existencia" : true
+    },
+    { 
+        "nombre" : "Pfizer", 
+        "dosis" : 2.0, 
+        "cantidad" : 30.0, 
+        "existencia" : true
+    },
+    { 
+        "nombre" : "Astrazeneca", 
+        "dosis" : 1.0, 
+        "cantidad" : 10.0, 
+        "existencia" : true
+    },
+    { 
+        "nombre" : "Astrazeneca", 
+        "dosis" : 2.0, 
+        "cantidad" : 0.0, 
+        "existencia" : false
+    }
+    
+]
