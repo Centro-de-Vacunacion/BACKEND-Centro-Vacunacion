@@ -1,4 +1,3 @@
-
 const { Schema, model } = require('mongoose');
 
 const VacunasSchema = Schema({
@@ -17,11 +16,10 @@ const VacunasSchema = Schema({
 });
 
 
-
-
 VacunasSchema.methods.toJSON = function() {
-    const { __v, password, ...vacunas  } = this.toObject();
+    const { __v, password, ...vacunas } = this.toObject();
     return vacunas;
 }
 
-module.exports = model( 'Vacunas', VacunasSchema );
+
+module.exports = model('Vacunas', VacunasSchema);

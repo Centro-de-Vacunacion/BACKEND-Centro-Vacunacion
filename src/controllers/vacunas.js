@@ -1,12 +1,14 @@
 const { response, request } = require("express");
 const _ = require('underscore');
 const Vacunas = require("../models/vacunas");
+const Usuarios = require("../models/usuario");
 
 const vacunasGet = async(req = request, res = response) => {
     const [vacunas] = await Promise.all([Vacunas.find({})]);
 
     res.json({ vacunas });
 };
+
 
 const vacunasPut = async(req, res = response) => {
     const { id } = req.params;
@@ -75,5 +77,5 @@ const vacunasPut1 = async(req, res) => {
 module.exports = {
     vacunasGet,
     vacunasPut,
-    vacunasPut1
+    vacunasPut1,
 };

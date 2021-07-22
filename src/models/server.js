@@ -9,6 +9,7 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.vacunasPath = '/api/vacunas';
+        this.usuariosPath = '/api/usuarios';
 
         // Conectar a base de datos
         this.conectarDB();
@@ -41,12 +42,14 @@ class Server {
 
     routes() {
         this.app.use(this.vacunasPath, require('../routes/vacunas'));
+        this.app.use(this.usuariosPath, require('../routes/usuario'));
     }
 
     listen() {
         this.app.listen(this.port, () => {
             console.log('Servidor corriendo en puerto', this.port);
         });
+
     }
 
 }
