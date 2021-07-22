@@ -6,7 +6,7 @@ const { dbConnection } = require('../database');
 class Server {
 
     constructor() {
-        this.app  = express();
+        this.app = express();
         this.port = process.env.PORT;
         this.vacunasPath = '/api/vacunas';
 
@@ -15,6 +15,7 @@ class Server {
 
         // Middlewares
         this.middlewares();
+
 
         // Rutas de mi aplicación
         this.routes();
@@ -26,12 +27,12 @@ class Server {
 
 
     middlewares() {
-
+        this.app.use(express.urlencoded({ extended: false }));
         // CORS
-        this.app.use( cors() );
+        this.app.use(cors());
 
         // Lectura y parseo del body
-        this.app.use( express.json() );
+        this.app.use(express.json());
 
         // // Directorio Público
         // this.app.use( express.static('public') );
@@ -39,12 +40,12 @@ class Server {
     }
 
     routes() {
-        this.app.use( this.vacunasPath, require('../routes/vacunas'));
+        this.app.use(this.vacunasPath, require('../routes/vacunas'));
     }
 
     listen() {
-        this.app.listen( this.port, () => {
-            console.log('Servidor corriendo en puerto', this.port );
+        this.app.listen(this.port, () => {
+            console.log('Servidor corriendo en puerto', this.port);
         });
     }
 
