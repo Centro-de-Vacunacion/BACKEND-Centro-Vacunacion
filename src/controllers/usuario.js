@@ -3,9 +3,9 @@ const _ = require('underscore');
 const Usuarios = require("../models/usuario");
 
 const usuarioGet = async(req = request, res = response) => {
-    const [usuarios] = await Promise.all([Usuarios.find({})]);
+    const [usuarios] = await Promise.all([Usuarios.find({cita:false})]);
 
-    res.json({ usuarios });
+    res.json( usuarios );
 };
 
 const usuarioPost = async(req, res) => {

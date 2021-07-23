@@ -1,8 +1,9 @@
 const { Schema, model } = require('mongoose');
 
 const UsuariosSchema = Schema({
+
     cedula: {
-        type: String,
+        type: Number,
     },
     nombre: {
         type: String,
@@ -19,6 +20,30 @@ const UsuariosSchema = Schema({
     vacunacion_completa: {
         type: Boolean,
     },
+    vacunacion: [
+        {
+            Dosis1ra:{
+                type: String,
+            },
+            id_vacuna: {
+                type: String,
+            },
+            nombre_vacuna: {
+                type: String,
+            }
+        },
+        {
+            Dosis2da:{
+                type: String,
+            },
+            id_vacuna: {
+                type: String,
+            },
+            nombre_vacuna: {
+                type: String,
+            }
+        }
+    ],
 });
 
 UsuariosSchema.methods.toJSON = function() {
