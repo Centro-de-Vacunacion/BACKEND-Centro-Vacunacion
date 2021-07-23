@@ -20,9 +20,8 @@ const UsuariosSchema = Schema({
     vacunacion_completa: {
         type: Boolean,
     },
-    vacunacion: [
-        {
-            Dosis1ra:{
+    vacunacion: [{
+            Dosis1ra: {
                 type: String,
             },
             id_vacuna: {
@@ -33,7 +32,7 @@ const UsuariosSchema = Schema({
             }
         },
         {
-            Dosis2da:{
+            Dosis2da: {
                 type: String,
             },
             id_vacuna: {
